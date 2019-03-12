@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="folder">
+            <h2><span jhiTranslate="ccApp.folder.detail.title">Folder</span> {{folder.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccApp.folder.folder">Folder</span></dt>
+                <dd>
+                    <span>{{folder.folder}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.folder.note">Note</span></dt>
+                <dd>
+                    <span>{{folder.note}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.folder.alias">Alias</span></dt>
+                <dd>
+                    <div *ngIf="folder.alias">
+                        <a [routerLink]="['/alias', folder.alias?.id, 'view']">{{folder.alias?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="ccApp.folder.radio">Radio</span></dt>
+                <dd>
+                    <div *ngIf="folder.radio">
+                        <a [routerLink]="['/radio', folder.radio?.id, 'view']">{{folder.radio?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/folder', folder.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

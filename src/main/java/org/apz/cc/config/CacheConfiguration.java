@@ -40,6 +40,13 @@ public class CacheConfiguration {
             cm.createCache(org.apz.cc.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(org.apz.cc.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(org.apz.cc.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Folder.class.getName(), jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Alias.class.getName(), jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Alias.class.getName() + ".folders", jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Radio.class.getName(), jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Radio.class.getName() + ".folders", jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.Radio.class.getName() + ".aliases", jcacheConfiguration);
+            cm.createCache(org.apz.cc.domain.CCG.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

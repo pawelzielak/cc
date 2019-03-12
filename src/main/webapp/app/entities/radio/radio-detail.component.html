@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="radio">
+            <h2><span jhiTranslate="ccApp.radio.detail.title">Radio</span> {{radio.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccApp.radio.folder">Folder</span></dt>
+                <dd>
+                    <span>{{radio.folder}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.radio.alias">Alias</span></dt>
+                <dd>
+                    <span>{{radio.alias}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.radio.ccg">Ccg</span></dt>
+                <dd>
+                    <span>{{radio.ccg}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.radio.note">Note</span></dt>
+                <dd>
+                    <span>{{radio.note}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/radio', radio.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
