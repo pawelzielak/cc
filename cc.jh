@@ -1,0 +1,42 @@
+
+entity Folder {
+	folder String required,
+	note String
+}
+
+entity Alias {
+	alias String required,
+	folder String required,
+	note String
+}
+
+entity Radio {
+	id String required,
+	folder String required,
+	alias String,
+	ccg String,
+	note String
+}
+
+entity CCG {
+	ccg String required,
+	note String
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Alias{folder} to Folder,
+	Radio{folder} to Folder,
+	Radio{folder} to CCG,
+	Radio{alias} to Alias
+}
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all 
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
