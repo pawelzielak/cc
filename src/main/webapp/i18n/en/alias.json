@@ -1,0 +1,25 @@
+{
+    "ccApp": {
+        "alias": {
+            "home": {
+                "title": "Aliases",
+                "createLabel": "Create a new Alias",
+                "createOrEditLabel": "Create or edit a Alias"
+            },
+            "created": "A new Alias is created with identifier {{ param }}",
+            "updated": "A Alias is updated with identifier {{ param }}",
+            "deleted": "A Alias is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Alias {{ id }}?"
+            },
+            "detail": {
+                "title": "Alias"
+            },
+            "alias": "Alias",
+            "folder": "Folder",
+            "note": "Note",
+            "folder": "Folder",
+            "radio": "Radio"
+        }
+    }
+}

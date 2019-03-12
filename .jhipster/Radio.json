@@ -1,0 +1,53 @@
+{
+    "name": "Radio",
+    "fields": [
+        {
+            "fieldName": "folder",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "alias",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ccg",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "folder",
+            "otherEntityRelationshipName": "radio",
+            "relationshipName": "folder"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cCG",
+            "otherEntityRelationshipName": "radio",
+            "relationshipName": "folder"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "alias",
+            "otherEntityRelationshipName": "radio",
+            "relationshipName": "alias"
+        }
+    ],
+    "changelogDate": "20190312122622",
+    "entityTableName": "radio",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

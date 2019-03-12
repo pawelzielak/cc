@@ -1,0 +1,23 @@
+{
+    "ccApp": {
+        "cCG": {
+            "home": {
+                "title": "CCGS",
+                "createLabel": "Create a new CCG",
+                "createOrEditLabel": "Create or edit a CCG"
+            },
+            "created": "A new CCG is created with identifier {{ param }}",
+            "updated": "A CCG is updated with identifier {{ param }}",
+            "deleted": "A CCG is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete CCG {{ id }}?"
+            },
+            "detail": {
+                "title": "CCG"
+            },
+            "ccg": "Ccg",
+            "note": "Note",
+            "radio": "Radio"
+        }
+    }
+}

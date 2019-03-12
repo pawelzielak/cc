@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cCG">
+            <h2><span jhiTranslate="ccApp.cCG.detail.title">CCG</span> {{cCG.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccApp.cCG.ccg">Ccg</span></dt>
+                <dd>
+                    <span>{{cCG.ccg}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.cCG.note">Note</span></dt>
+                <dd>
+                    <span>{{cCG.note}}</span>
+                </dd>
+                <dt><span jhiTranslate="ccApp.cCG.radio">Radio</span></dt>
+                <dd>
+                    <div *ngIf="cCG.radio">
+                        <a [routerLink]="['/radio', cCG.radio?.id, 'view']">{{cCG.radio?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ccg', cCG.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
